@@ -1,63 +1,89 @@
-# Deprem Sonrası Drone ile Yardım Dağıtımı Optimizasyonu
+# 🚁 Drone-Based Disaster Relief Distribution Optimization
 
-Bu proje, **deprem sonrası yardım malzemelerinin** drone kullanılarak **en verimli şekilde** dağıtımını planlamayı amaçlamaktadır.  
-Sistem; **K-Means Kümeleme Algoritması**, **Dijkstra Algoritması** ve **NetworkX** kütüphanesini kullanarak:
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![Scikit-learn](https://img.shields.io/badge/Scikit--learn-KMeans-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![NetworkX](https://img.shields.io/badge/NetworkX-Graph%20Analysis-informational)](https://networkx.org/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
--  İhtiyaç noktalarını kümelendirir
--  Her küme için en uygun depoyu belirler
--  En kısa dağıtım rotasını oluşturur
--  Drone kapasitesine göre dağıtımı planlar
+An optimization system that plans the most efficient distribution of relief supplies via drones in the aftermath of an earthquake.
+The system combines **K-Means clustering**, **Dijkstra's shortest path algorithm**, and the **NetworkX** graph library to:
 
----
+- Cluster demand points based on need
+- Determine the optimal warehouse/depot for each cluster
+- Compute the shortest delivery route
+- Plan distribution according to drone capacity
 
-## Projenin Amacı
-Afet sonrası hızlı, planlı ve optimize edilmiş yardım dağıtımı sağlayarak:
-- Teslimat süresini en aza indirmek
-- Drone kapasitesini verimli kullanmak
-- Yardımların **öncelikli ihtiyaç bölgelerine** zamanında ulaşmasını sağlamak
+## 📑 Table of Contents
 
----
+- [Purpose](#-purpose)
+- [Tech Stack](#-tech-stack)
+- [How It Works](#-how-it-works)
+- [Project Structure](#-project-structure)
+- [Getting Started](#-getting-started)
+- [Future Improvements](#-future-improvements)
+- [Authors](#-authors)
 
-## Kullanılan Teknolojiler
-- **Python**
-- **Pandas** → Veri işlemleri
-- **NumPy** → Matematiksel hesaplamalar
-- **Scikit-learn (KMeans)** → Kümeleme algoritması
-- **NetworkX** → Graf yapısı ve en kısa yol analizi
+## 🎯 Purpose
 
----
+The goal of this project is to enable fast, planned, and optimized relief distribution after a disaster by:
 
-## Çalışma Mantığı
-1.  **Excel'den veriler yüklenir** (ihtiyaç noktaları ve mesafeler)
-2.  **K-Means** ile ihtiyaç noktaları kümelenir
-3.  Her küme için en yakın depo belirlenir
-4.  **Dijkstra algoritması** ile en kısa yol hesaplanır
-5.  Drone kapasitesine göre dağıtım planı oluşturulur
+- Minimizing delivery time
+- Making efficient use of drone capacity
+- Ensuring relief supplies reach high-priority need zones on time
 
----
+## 🛠 Tech Stack
 
-## Proje Dosya Yapısı
+| Technology | Purpose |
+|---|---|
+| **Python** | Core language |
+| **Pandas** | Data processing |
+| **NumPy** | Mathematical computations |
+| **Scikit-learn (KMeans)** | Clustering algorithm |
+| **NetworkX** | Graph structure and shortest-path analysis |
+
+## ⚙️ How It Works
+
+1. Data is loaded from Excel files (demand points and distance matrix).
+2. Demand points are clustered using K-Means.
+3. The nearest depot is determined for each cluster.
+4. The shortest route is calculated using Dijkstra's algorithm.
+5. A distribution plan is generated based on drone capacity.
+
+## 📂 Project Structure
+
 ```
-📁 Drone-ile-Deprem-Yardim-Dagitim-Optimizasyonu
-├──  Rapor.docx → Proje raporu
-├──  ihtiyac_tablosu.xlsx → İhtiyaç noktaları verisi
-├──  mesafe_tablosu.xlsx → Mesafe matrisi
-├──  yapay.py → Ana Python kodu
-└──  .DS_Store → Sistem dosyası
+drone-based-disaster-relief-optimization/
+│
+├── report.docx              → Project report
+├── demand-table.xlsx        → Demand point data
+├── distance-table.xlsx      → Distance matrix
+└── main.py                  → Main Python script
 ```
 
----
+## 🚀 Getting Started
 
-##  Kurulum ve Çalıştırma
-1. Gerekli kütüphaneleri yükleyin:
-   ```bash
-   pip install pandas numpy scikit-learn networkx
-2. Python dosyasını çalıştırın:
-    ```bash
-    python yapay.py
-    ```
-## Geliştirme Fikirleri
-- Gerçek zamanlı GPS verileri ile dinamik rota güncelleme
-- Hava durumu verilerini rota planlamasına dahil etme
-- Drone batarya seviyesine göre rota optimizasyonu
-- Harita görselleştirmesi ekleme
+1. Install the required libraries:
+
+```bash
+pip install pandas numpy scikit-learn networkx
+```
+
+2. Run the script:
+
+```bash
+python main.py
+```
+
+## 🔮 Future Improvements
+
+- Dynamic route updates using real-time GPS data
+- Incorporating weather data into route planning
+- Route optimization based on drone battery level
+- Adding map-based visualization
+
+## 👥 Authors
+
+This project was built as a team effort by:
+
+- **Esmanur Yıldız**
+- **Sedanur Peker**
