@@ -1,4 +1,4 @@
-# 🚁 Drone-Based Disaster Relief Distribution Optimization
+#  Drone-Based Disaster Relief Distribution Optimization
 
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-KMeans-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
@@ -13,7 +13,7 @@ The system combines **K-Means clustering**, **Dijkstra's shortest path algorithm
 - Compute the shortest delivery route
 - Plan distribution according to drone capacity
 
-## 📑 Table of Contents
+##  Table of Contents
 
 - [Purpose](#-purpose)
 - [Tech Stack](#-tech-stack)
@@ -23,7 +23,7 @@ The system combines **K-Means clustering**, **Dijkstra's shortest path algorithm
 - [Future Improvements](#-future-improvements)
 - [Authors](#-authors)
 
-## 🎯 Purpose
+##  Purpose
 
 The goal of this project is to enable fast, planned, and optimized relief distribution after a disaster by:
 
@@ -31,7 +31,7 @@ The goal of this project is to enable fast, planned, and optimized relief distri
 - Making efficient use of drone capacity
 - Ensuring relief supplies reach high-priority need zones on time
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -41,7 +41,7 @@ The goal of this project is to enable fast, planned, and optimized relief distri
 | **Scikit-learn (KMeans)** | Clustering algorithm |
 | **NetworkX** | Graph structure and shortest-path analysis |
 
-## ⚙️ How It Works
+##  How It Works
 
 1. Data is loaded from Excel files (demand points and distance matrix).
 2. Demand points are clustered using K-Means.
@@ -49,7 +49,7 @@ The goal of this project is to enable fast, planned, and optimized relief distri
 4. The shortest route is calculated using Dijkstra's algorithm.
 5. A distribution plan is generated based on drone capacity.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 drone-based-disaster-relief-optimization/
@@ -60,7 +60,7 @@ drone-based-disaster-relief-optimization/
 └── main.py                  → Main Python script
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. Install the required libraries:
 
@@ -74,14 +74,14 @@ pip install pandas numpy scikit-learn networkx
 python main.py
 ```
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - Dynamic route updates using real-time GPS data
 - Incorporating weather data into route planning
 - Route optimization based on drone battery level
 - Adding map-based visualization
 
-## 👥 Authors
+##  Authors
 
 This project was built as a team effort by:
 
